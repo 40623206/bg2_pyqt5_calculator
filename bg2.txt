@@ -8,3 +8,10 @@
 40623214
 40623215
 it is so difficult i can't handle it
+
+數字按鈕signal與slot 設定與顯示運作
+現十加或減功能(含=)
+現實乘或除功能(含=)
+現實平方根與平方1/X
+scrum-1 當觀眾
+
