@@ -26,10 +26,10 @@ class Dialog(QDialog, Ui_Dialog):
         '''以下為使用者自行編寫程式碼區'''
         self.waitForOperand = True
         
-        num = [self.one,  self.two,  self.three,  self.four , self.five, \
+        number = [self.one,  self.two,  self.three,  self.four , self.five, \
         self.six,  self.seven,  self.eight,  self.nine,  self.zero]
         
-        for i in num :
+        for i in number :
             i.clicked.connect (self.digitClicked)
         
         self.clearAllButton.clicked.connect(self.clearAll)
@@ -48,6 +48,9 @@ class Dialog(QDialog, Ui_Dialog):
         if self.waitForOperand:
             self.display.clear()
             self.waitForOperand = False
+        
+        if self.display.text() =='0' and digitValue == 0.0:
+            return
         
         self.display.setText(self.display.text() + str(digitValue))
         

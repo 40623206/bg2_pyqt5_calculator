@@ -1,13 +1,14 @@
 ﻿bg2 任務分配
 
 學員:
-40623206
-40623204
-40623249
-40623251
-40623214
-40623215
-it is so difficult i can't handle it
+40623206 數字 + - clearAll 數字疊加
+40623204 1/x x^2 =
+40623249 * /
+40623251 MR MS M+
+40623214 MC clear +-
+40623215 Backspace . sqrt(根號)
+
+it is so difficult that i can't handle it.
 
 數字按鈕signal與slot 設定與顯示運作
 現十加或減功能(含=)
