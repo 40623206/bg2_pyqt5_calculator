@@ -4,6 +4,8 @@
 Module implementing Dialog.
 """
 
+import math
+
 from PyQt5.QtCore import pyqtSlot
 from PyQt5.QtWidgets import QDialog
 
@@ -24,6 +26,7 @@ class Dialog(QDialog, Ui_Dialog):
         super(Dialog, self).__init__(parent)
         self.setupUi(self)
         '''以下為使用者自行編寫程式碼區'''
+        
         self.waitForOperand = True
         
         number = [self.one,  self.two,  self.three,  self.four , self.five, \
@@ -34,6 +37,10 @@ class Dialog(QDialog, Ui_Dialog):
         
         self.clearAllButton.clicked.connect(self.clearAll)
         self.plusButton.clicked.connect(self.additiveOperatorClicked)
+        self.backspaceButton.clicked.connect(self.backspaceClicked)
+        self.clearButton.clicked.connect(self.clear)
+        self.squareRootButton.clicked.connect(self.unaryOperatorClicked)
+        self.reciprocalButton.clicked.connect(self.unaryOperatorClicked)
 
     def digitClicked(self):
         '''
@@ -56,7 +63,27 @@ class Dialog(QDialog, Ui_Dialog):
         
     def unaryOperatorClicked(self):
         '''單一運算元按下後處理方法'''
-        pass
+        #pass
+        clickedButton = self.sender()
+        clickedOperator = clickedButton.text()
+        operand = float(self.display.text())
+
+        if clickedOperator == "Sqrt":
+            if operand < 0.0:
+                self.abortOperation()
+                return
+
+            result = math.sqrt(operand)
+
+        if clickedOperator == "1/x":
+            if operand == 0.0:
+                self.abortOperation()
+                return
+
+            result = 1.0 / operand
+
+        self.display.setText(str(result))
+        self.waitingForOperand = True        
         
     def additiveOperatorClicked(self):
         '''加或減按下後進行的處理方法'''
@@ -81,11 +108,19 @@ class Dialog(QDialog, Ui_Dialog):
         
     def backspaceClicked(self):
         '''回復鍵按下的處理方法'''
-        pass
+        #passs
+        text = self.display.text()[:-1]
+        if not text:
+            text = '0'
+            self.waitingForOperand = True
+
+        self.display.setText(text)
         
     def clear(self):
         '''清除鍵按下後的處理方法'''
-        pass
+        #pass
+        self.display.setText('0')
+        self.waitingForOperand = True
         
     def clearAll(self):
         '''全部清除鍵按下後的處理方法'''
@@ -114,7 +149,8 @@ class Dialog(QDialog, Ui_Dialog):
         
     def abortOperation(self):
         '''中斷運算'''
-        pass
+        #pass
+        self.display.setText("####")
         
     def calculate(self):
         '''計算'''
