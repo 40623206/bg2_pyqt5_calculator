@@ -102,7 +102,7 @@ class Dialog(QDialog, Ui_Dialog):
         '''小數點按下後的處理方法'''
         #pass
         self.display.setText
- 
+
         if "." not in self.display.text():
             self.display.setText(self.display.text() + ".")
  
