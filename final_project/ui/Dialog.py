@@ -27,16 +27,22 @@ class Dialog(QDialog, Ui_Dialog):
         self.setupUi(self)
         '''以下為使用者自行編寫程式碼區'''
         
-        self.waitForOperand = True
+        self.waitingForOperand = True
+        self.display.setText('0')
         
         number = [self.one,  self.two,  self.three,  self.four , self.five, \
         self.six,  self.seven,  self.eight,  self.nine,  self.zero]
         
+        plus_minus = [self.plusButton, self.minusButton]
         for i in number :
             i.clicked.connect (self.digitClicked)
         
+        for i in plus_minus:
+            i.clicked.connect (self.additiveOperatorClicked)
+        
         self.clearAllButton.clicked.connect(self.clearAll)
         self.plusButton.clicked.connect(self.additiveOperatorClicked)
+        self.minusButton.clicked.connect(self.additiveOperatorClicked)
         self.backspaceButton.clicked.connect(self.backspaceClicked)
         self.clearButton.clicked.connect(self.clear)
         self.squareRootButton.clicked.connect(self.unaryOperatorClicked)
@@ -52,12 +58,12 @@ class Dialog(QDialog, Ui_Dialog):
         clickedButton = self.sender()
         digitValue = int (clickedButton.text())
         
-        if self.waitForOperand:
-            self.display.clear()
-            self.waitForOperand = False
-        
         if self.display.text() =='0' and digitValue == 0.0:
             return
+        
+        if self.waitingForOperand:
+            self.display.clear()
+            self.waitingForOperand = False
         
         self.display.setText(self.display.text() + str(digitValue))
         
@@ -88,7 +94,9 @@ class Dialog(QDialog, Ui_Dialog):
     def additiveOperatorClicked(self):
         '''加或減按下後進行的處理方法'''
         #pass
-        self.waitForOperand = True
+        
+        self.waitingForOperand = True
+        
         
     def multiplicativeOperatorClicked(self):
         '''乘或除按下後進行的處理方法'''
@@ -109,6 +117,8 @@ class Dialog(QDialog, Ui_Dialog):
     def backspaceClicked(self):
         '''回復鍵按下的處理方法'''
         #passs
+        if self.waitingForOperand:
+            return
         text = self.display.text()[:-1]
         if not text:
             text = '0'
@@ -125,7 +135,8 @@ class Dialog(QDialog, Ui_Dialog):
     def clearAll(self):
         '''全部清除鍵按下後的處理方法'''
         #pass
-        self.display.clear()
+        self.display.setText('0')
+        self.waitingForOperand = True
         
     def clearMemory(self):
         '''清除記憶體鍵按下後的處理方法'''
