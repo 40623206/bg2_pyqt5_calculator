@@ -35,10 +35,10 @@ class Dialog(QDialog, Ui_Dialog):
         
         plus_minus = [self.plusButton, self.minusButton]
         for i in number :
-             i.clicked.connect (self.digitClicked)
+            i.clicked.connect (self.digitClicked)
         
         for i in plus_minus:
-             i.clicked.connect (self.additiveOperatorClicked)
+            i.clicked.connect (self.additiveOperatorClicked)
             
         
         
@@ -209,7 +209,5 @@ class Dialog(QDialog, Ui_Dialog):
             self.sumSoFar += rightOperand
         elif pendingOperator == "-":
             self.sumSoFar -= rightOperand
-
-            
 
         return True
