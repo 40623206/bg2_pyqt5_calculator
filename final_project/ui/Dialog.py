@@ -41,7 +41,7 @@ class Dialog(QDialog, Ui_Dialog):
         self.clearButton.clicked.connect(self.clear)
         self.squareRootButton.clicked.connect(self.unaryOperatorClicked)
         self.reciprocalButton.clicked.connect(self.unaryOperatorClicked)
-
+        self.pointButton.clicked.connect(self.pointClicked)
     def digitClicked(self):
         '''
         使用者按下數字鍵, 必須能夠累積顯示該數字
@@ -100,8 +100,13 @@ class Dialog(QDialog, Ui_Dialog):
         
     def pointClicked(self):
         '''小數點按下後的處理方法'''
-        pass
-        
+        #pass
+        self.display.setText
+ 
+        if "." not in self.display.text():
+            self.display.setText(self.display.text() + ".")
+ 
+        self.waitingForOperand = False
     def changeSignClicked(self):
         '''變號鍵按下後的處理方法'''
         pass
