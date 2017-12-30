@@ -34,6 +34,7 @@ class Dialog(QDialog, Ui_Dialog):
         self.six,  self.seven,  self.eight,  self.nine,  self.zero]
         
         plus_minus = [self.plusButton, self.minusButton]
+        
         for i in number :
             i.clicked.connect (self.digitClicked)
         
@@ -45,8 +46,6 @@ class Dialog(QDialog, Ui_Dialog):
         self.equalButton.clicked.connect(self.equalClicked)        
         self.clearButton.clicked.connect(self.clear)
         self.clearAllButton.clicked.connect(self.clearAll)
-        self.plusButton.clicked.connect(self.additiveOperatorClicked)
-        self.minusButton.clicked.connect(self.additiveOperatorClicked)
         self.backspaceButton.clicked.connect(self.backspaceClicked)
         self.squareRootButton.clicked.connect(self.unaryOperatorClicked)
         self.reciprocalButton.clicked.connect(self.unaryOperatorClicked)
@@ -213,7 +212,7 @@ class Dialog(QDialog, Ui_Dialog):
         #pass
         if pendingOperator == "+":
             self.sumSoFar += rightOperand
-        elif pendingOperator == "-":
+        if pendingOperator == "-":
             self.sumSoFar -= rightOperand
 
         return True
