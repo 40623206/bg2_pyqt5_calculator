@@ -6,7 +6,7 @@ Module implementing Dialog.
 
 import math
 
-from PyQt5.QtCore import pyqtSlot
+#from PyQt5.QtCore import pyqtSlot
 from PyQt5.QtWidgets import QDialog
 
 from .Ui_Dialog import Ui_Dialog
@@ -42,7 +42,8 @@ class Dialog(QDialog, Ui_Dialog):
             i.clicked.connect (self.additiveOperatorClicked)
             
         
-        
+
+        self.timesButton.clicked.connect(self.multiplicativeOperatorClicked)   
         self.equalButton.clicked.connect(self.equalClicked)        
         self.clearButton.clicked.connect(self.clear)
         self.clearAllButton.clicked.connect(self.clearAll)
@@ -119,13 +120,40 @@ class Dialog(QDialog, Ui_Dialog):
         
     def multiplicativeOperatorClicked(self):
         '''乘或除按下後進行的處理方法'''
-        pass
-        
+       #pass 
+        clickedButton = self.sender()
+        clickedOperator = clickedButton.text()
+        # 將按鈕顯示的 text 轉為浮點數
+        operand = float(self.display.text())
+
+        # 若連續按下乘或除, 則以目前的運算數與運算子執行運算
+        if self.pendingMultiplicativeOperator:
+            if not self.calculate(operand, self.pendingMultiplicativeOperator):
+                self.abortOperation()
+                return
+
+            # 將目前乘或除的累計運算數顯示在 display 上
+            self.display.setText(str(self.factorSoFar))
+        else:
+            self.factorSoFar = operand
+
+        # 能夠重複按下乘或除, 以目前的運算數值執行重複運算
+        self.pendingMultiplicativeOperator = clickedOperator
+        self.waitingForOperand = True
     def equalClicked(self):
         '''等號按下後的處理方法'''
         #pass
         operand = float(self.display.text())
 
+        if self.pendingMultiplicativeOperator:
+            if not self.calculate(operand, self.pendingMultiplicativeOperator):
+                self.abortOperation()
+                return
+            # factorSoFar 為乘或除運算所得之暫存數值
+            operand = self.factorSoFar
+            self.factorSoFar = 0.0
+            self.pendingMultiplicativeOperator = ''
+        
         if self.pendingAdditiveOperator:
             if not self.calculate(operand, self.pendingAdditiveOperator):
                 self.abortOperation()
