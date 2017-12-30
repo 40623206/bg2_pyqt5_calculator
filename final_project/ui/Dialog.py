@@ -34,6 +34,8 @@ class Dialog(QDialog, Ui_Dialog):
         self.six,  self.seven,  self.eight,  self.nine,  self.zero]
         
         plus_minus = [self.plusButton, self.minusButton]
+        times_division = [self.timesButton, self.divisionButton]
+        unary = [self.reciprocalButton,  self.squareRootButton]
         
         for i in number :
             i.clicked.connect (self.digitClicked)
@@ -41,20 +43,23 @@ class Dialog(QDialog, Ui_Dialog):
         for i in plus_minus:
             i.clicked.connect (self.additiveOperatorClicked)
             
+        for i in times_division:
+            i.clicked.connect(self.multiplicativeOperatorClicked)
         
-
-        self.timesButton.clicked.connect(self.multiplicativeOperatorClicked)   
-        self.equalButton.clicked.connect(self.equalClicked)        
+        for i in unary :
+            i.clicked.connect(self.unaryOperatorClicked)
+            
         self.clearButton.clicked.connect(self.clear)
         self.clearAllButton.clicked.connect(self.clearAll)
         self.backspaceButton.clicked.connect(self.backspaceClicked)
-        self.squareRootButton.clicked.connect(self.unaryOperatorClicked)
-        self.reciprocalButton.clicked.connect(self.unaryOperatorClicked)
         self.pointButton.clicked.connect(self.pointClicked) 
+        self.equalButton.clicked.connect(self.equalClicked)
         
         self.pendingAdditiveOperator = ''
         self.sumSoFar = 0.0
         self.waitingForOperand = True
+        self.pendingMultiplicativeOperator = ''
+        self.factorSoFar = 0.0
 
     def digitClicked(self):
         '''
@@ -81,6 +86,16 @@ class Dialog(QDialog, Ui_Dialog):
         clickedButton = self.sender()
         clickedOperator = clickedButton.text()
         operand = float(self.display.text())
+
+        if self.pendingMultiplicativeOperator:
+            if not self.calculate(operand, self.pendingMultiplicativeOperator):
+                self.abortOperation()
+                return
+                
+            self.display.setText(str(self.factorSoFar))
+            operand = self.factorSoFar
+            self.factorSoFar = 0.0
+            self.pendingMultiplicativeOperator = ''
 
         if self.pendingAdditiveOperator:
             if not self.calculate(operand, self.pendingAdditiveOperator):
@@ -242,5 +257,12 @@ class Dialog(QDialog, Ui_Dialog):
             self.sumSoFar += rightOperand
         if pendingOperator == "-":
             self.sumSoFar -= rightOperand
+        if pendingOperator == "*":
+            self.factorSoFar *= rightOperand
+        if pendingOperator == "/":
+            if rightOperand == 0.0:
+                return False
+        
+            self.factorSoFar /= rightOperand
 
         return True
