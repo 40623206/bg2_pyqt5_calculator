@@ -35,7 +35,7 @@ class Dialog(QDialog, Ui_Dialog):
         
         plus_minus = [self.plusButton, self.minusButton]
         times_division = [self.timesButton, self.divisionButton]
-        unary = [self.reciprocalButton,  self.squareRootButton]
+        unary = [self.reciprocalButton,  self.squareRootButton,  self.powerButton]
         
         for i in number :
             i.clicked.connect (self.digitClicked)
@@ -129,6 +129,9 @@ class Dialog(QDialog, Ui_Dialog):
                 return
 
             result = 1.0 / operand
+            
+        if clickedOperator == "X^2":
+            result = math.pow(operand, 2.0)
 
         self.display.setText(str(result))
         self.waitingForOperand = True   
