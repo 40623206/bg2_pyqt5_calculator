@@ -52,10 +52,7 @@ class Dialog(QDialog, Ui_Dialog):
         self.clearButton.clicked.connect(self.clear)
         self.clearAllButton.clicked.connect(self.clearAll)
         self.backspaceButton.clicked.connect(self.backspaceClicked)
-<<<<<<< HEAD
-=======
 
->>>>>>> fa537c574ebe0ff24e1adcd3ac0d3e27b67fa21d
         self.clearButton.clicked.connect(self.clear)
         self.readMemoryButton.clicked.connect(self.readMemory)
         self.pointButton.clicked.connect(self.pointClicked) 
