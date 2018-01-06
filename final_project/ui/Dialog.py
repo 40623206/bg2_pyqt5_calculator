@@ -47,6 +47,7 @@ class Dialog(QDialog, Ui_Dialog):
         self.clearButton.clicked.connect(self.clear)
         self.squareRootButton.clicked.connect(self.unaryOperatorClicked)
         self.reciprocalButton.clicked.connect(self.unaryOperatorClicked)
+        self.readMemoryButton.clicked.connect(self.readMemory)
 
     def digitClicked(self):
         '''
@@ -144,7 +145,9 @@ class Dialog(QDialog, Ui_Dialog):
         
     def readMemory(self):
         '''讀取記憶體鍵按下後的處理方法'''
-        pass
+        #pass
+        self.display.setText(str(self.sumInMemory))
+        self.waitingForOperand = True
         
     def setMemory(self):
         '''設定記憶體鍵按下後的處理方法'''
