@@ -52,6 +52,12 @@ class Dialog(QDialog, Ui_Dialog):
         self.clearButton.clicked.connect(self.clear)
         self.clearAllButton.clicked.connect(self.clearAll)
         self.backspaceButton.clicked.connect(self.backspaceClicked)
+<<<<<<< HEAD
+        self.clearButton.clicked.connect(self.clear)
+        self.squareRootButton.clicked.connect(self.unaryOperatorClicked)
+        self.reciprocalButton.clicked.connect(self.unaryOperatorClicked)
+        self.readMemoryButton.clicked.connect(self.readMemory)
+=======
         self.pointButton.clicked.connect(self.pointClicked) 
         self.equalButton.clicked.connect(self.equalClicked)
         self.clearMemoryButton.clicked.connect(self.clearMemory)
@@ -63,6 +69,7 @@ class Dialog(QDialog, Ui_Dialog):
         self.pendingMultiplicativeOperator = ''
         self.factorSoFar = 0.0
         self.sumInMemory = 0.0
+>>>>>>> 641f600ae6ebfbec5c70ce04b54def60c20096a8
 
     def digitClicked(self):
         '''
@@ -247,7 +254,9 @@ class Dialog(QDialog, Ui_Dialog):
         
     def readMemory(self):
         '''讀取記憶體鍵按下後的處理方法'''
-        pass
+        #pass
+        self.display.setText(str(self.sumInMemory))
+        self.waitingForOperand = True
         
     def setMemory(self):
         '''設定記憶體鍵按下後的處理方法'''
