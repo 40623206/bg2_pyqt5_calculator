@@ -264,6 +264,7 @@ class Dialog(QDialog, Ui_Dialog):
     def abortOperation(self):
         '''中斷運算'''
         #pass
+        self.clearAll()
         self.display.setText("####")
         
     def calculate(self,  rightOperand,  pendingOperator):
