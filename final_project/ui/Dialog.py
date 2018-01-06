@@ -260,8 +260,9 @@ class Dialog(QDialog, Ui_Dialog):
         
     def setMemory(self):
         '''設定記憶體鍵按下後的處理方法'''
-        pass
-        
+        #pass
+        self.equalClicked()
+        self.sumInMemory = float(self.display.text())        
     def addToMemory(self):
         '''放到記憶體鍵按下後的處理方法'''
         pass
