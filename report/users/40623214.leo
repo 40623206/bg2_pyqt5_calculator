@@ -61,6 +61,12 @@
 <v t="leo.20180107114241.4"><vh>new:程式開發心得</vh></v>
 </v>
 </v>
+<v t="leo.20180107150818.2" a="E"><vh>Recovered Nodes</vh>
+<v t="leo.20180107150818.3"><vh>Recovered node "計算機程式內容" from @clean calculator.md</vh>
+<v t="leo.20180107150818.4"><vh>old:計算機程式內容</vh></v>
+<v t="leo.20180107150818.5"><vh>new:計算機程式內容</vh></v>
+</v>
+</v>
 </vnodes>
 <tnodes>
 <t tx="40323230.20170123213451.1">@language python
@@ -370,6 +376,201 @@ bg2：https://github.com/40623206/bg2_pyqt5_calculator
 40623251-
 
 </t>
+<t tx="leo.20180107150818.2"></t>
+<t tx="leo.20180107150818.3">(uncached) yen.20170429215851.1
+Diff...
+  建立對話框
+  ---
+  
+  自動控制 的內容
+  
+  其中包含一個表格：
+  
+  Table: Python 網際框架比較 {#tbl:網際框架}
+  
+  | Framework | Started | Py2 | Py3 | ORM | Template Engine | Auth Moudule | Database Admin | Project Scale |
+  |:---------:|:-------:|:---:|:---:|:---:|:---------------:|:------------:|:--------------:|:-------------:|
+  | Pyramid | 2005 | V | V |  |  | V |  | large |
+  | Django | 2006 | V | V | V | V | V | V | large |
+  | Flask | 2010 | V |  |  |  |  |  | small |
+  
+  稱為表 {@tbl:網際框架}。
+  
+  Table: 價目表 {#tbl:價目表}
+  
+  | Tables   |      Are      |  Cool |
+  |----------|:-------------:|------:|
+  | col 1 is |  left-aligned | $1600 |
+  | col 2 is |    centered   |   $12 |
+  | col 3 is | right-aligned |    $1 |
+  
+  稱為表 {@tbl:價目表}。
+  
+  關於表格生成可以參考這裡：[http://www.tablesgenerator.com/markdown_tables]
+  
+  [http://www.tablesgenerator.com/markdown_tables]: http://www.tablesgenerator.com/markdown_tables
+  
+  建立按鈕
+  ---
+  
+- 從左邊工具列拉按鈕"Push Button"
+- ![P-Button][]
+- 
+- 稱為圖 {@fig:P-Button}。
+- 
+- 並更改每一項的命名"objectName"
+- [P-Button]: ./images/P-Button.PNG {#fig:P-Button}
+- 
+- 以及拉顯示欄"Line Edit"
+- ![P-Display][]
+- 
+- 稱為圖 {@fig:P-Display}。
+- 
+- 更改其名稱為"display"
+- [P-Display]: ./images/P-Display.png {#fig:P-Display}
+- 
+- 
+  建立程式碼
+  ---
+  
+- 導入 sys 模組→import sys
+- 
+- 從PyQt5模組導入QtWidgets模組→from PyQt5 import QtWidgets
+- 
+- 從ui目錄導入Dialog.py, Python 程式檔案本身就是一個模組, 且文件名就是模組名→from ui import Dialog
+- 
+- 定義各數字名稱→number = [self.one,  self.two,  self.three,  self.four , self.five,　self.six,  self.seven,  self.eight,  self.nine,  self.zero]
+- 
+- 以及符號名稱→plus_minus = [self.plusButton, self.minusButton]
+- 
+- times_division = [self.timesButton, self.divisionButton]
+- 
+- unary = [self.reciprocalButton,  self.squareRootButton,  self.powerButton]
+- 
+- 建立迴圈使程式簡單化
+- 
+- ![for O][]
+- 
+- 稱為圖 {@fig:for O}。
+- [for O]: ./images/for O.png {#fig:for O}
+- 
+- 其餘建立各個Button的函式
+</t>
+<t tx="leo.20180107150818.4">建立對話框
+---
+
+自動控制 的內容
+
+其中包含一個表格：
+
+Table: Python 網際框架比較 {#tbl:網際框架}
+
+| Framework | Started | Py2 | Py3 | ORM | Template Engine | Auth Moudule | Database Admin | Project Scale |
+|:---------:|:-------:|:---:|:---:|:---:|:---------------:|:------------:|:--------------:|:-------------:|
+| Pyramid | 2005 | V | V |  |  | V |  | large |
+| Django | 2006 | V | V | V | V | V | V | large |
+| Flask | 2010 | V |  |  |  |  |  | small |
+
+稱為表 {@tbl:網際框架}。
+
+Table: 價目表 {#tbl:價目表}
+
+| Tables   |      Are      |  Cool |
+|----------|:-------------:|------:|
+| col 1 is |  left-aligned | $1600 |
+| col 2 is |    centered   |   $12 |
+| col 3 is | right-aligned |    $1 |
+
+稱為表 {@tbl:價目表}。
+
+關於表格生成可以參考這裡：[http://www.tablesgenerator.com/markdown_tables]
+
+[http://www.tablesgenerator.com/markdown_tables]: http://www.tablesgenerator.com/markdown_tables
+
+建立按鈕
+---
+
+建立程式碼
+---
+
+</t>
+<t tx="leo.20180107150818.5">建立對話框
+---
+
+自動控制 的內容
+
+其中包含一個表格：
+
+Table: Python 網際框架比較 {#tbl:網際框架}
+
+| Framework | Started | Py2 | Py3 | ORM | Template Engine | Auth Moudule | Database Admin | Project Scale |
+|:---------:|:-------:|:---:|:---:|:---:|:---------------:|:------------:|:--------------:|:-------------:|
+| Pyramid | 2005 | V | V |  |  | V |  | large |
+| Django | 2006 | V | V | V | V | V | V | large |
+| Flask | 2010 | V |  |  |  |  |  | small |
+
+稱為表 {@tbl:網際框架}。
+
+Table: 價目表 {#tbl:價目表}
+
+| Tables   |      Are      |  Cool |
+|----------|:-------------:|------:|
+| col 1 is |  left-aligned | $1600 |
+| col 2 is |    centered   |   $12 |
+| col 3 is | right-aligned |    $1 |
+
+稱為表 {@tbl:價目表}。
+
+關於表格生成可以參考這裡：[http://www.tablesgenerator.com/markdown_tables]
+
+[http://www.tablesgenerator.com/markdown_tables]: http://www.tablesgenerator.com/markdown_tables
+
+建立按鈕
+---
+
+從左邊工具列拉按鈕"Push Button"
+![P-Button][]
+
+稱為圖 {@fig:P-Button}。
+
+並更改每一項的命名"objectName"
+[P-Button]: ./images/P-Button.PNG {#fig:P-Button}
+
+以及拉顯示欄"Line Edit"
+![P-Display][]
+
+稱為圖 {@fig:P-Display}。
+
+更改其名稱為"display"
+[P-Display]: ./images/P-Display.png {#fig:P-Display}
+
+
+建立程式碼
+---
+
+導入 sys 模組→import sys
+
+從PyQt5模組導入QtWidgets模組→from PyQt5 import QtWidgets
+
+從ui目錄導入Dialog.py, Python 程式檔案本身就是一個模組, 且文件名就是模組名→from ui import Dialog
+
+定義各數字名稱→number = [self.one,  self.two,  self.three,  self.four , self.five,　self.six,  self.seven,  self.eight,  self.nine,  self.zero]
+
+以及符號名稱→plus_minus = [self.plusButton, self.minusButton]
+
+times_division = [self.timesButton, self.divisionButton]
+
+unary = [self.reciprocalButton,  self.squareRootButton,  self.powerButton]
+
+建立迴圈使程式簡單化
+
+![for O][]
+
+稱為圖 {@fig:for O}。
+[for O]: ./images/for O.png {#fig:for O}
+
+其餘建立各個Button的函式
+</t>
 <t tx="yen.20170429103742.1"></t>
 <t tx="yen.20170429103940.1"></t>
 <t tx="yen.20170429132400.1">每一位協同人員各在 users 目錄中建立一個 .leo 檔案
@@ -401,7 +602,7 @@ bg2：https://github.com/40623206/bg2_pyqt5_calculator
 <t tx="yen.20170429215041.1">可攜程式系統介紹
 ===
 
-可攜程式系統介紹
+Python是種通用.動態.面向對向的編程語言,Python的設計目的強調程序員的生產效率和代碼可讀性,Python靈感來自ABC.Hakell.Java.Lisp.圖標及Perl編成語言.Python不使用大括弧和關鍵詞,它使用空格縮排劃分代碼塊,相比於C++或Java,Python使開發者用更少的代碼表達,Python擁有動態型別系統和垃圾回收系統功能,可自動管理記憶體,並支援多種編程,包括物件導向.命令式.函數式及程式編程
 
 @others</t>
 <t tx="yen.20170429215130.1">啟動與關閉
@@ -454,39 +655,14 @@ print 函式
 <t tx="yen.20170429215416.1"> PyQt5 簡介
 ===
 
-說明 PyQt5 基本架構與程式開發流程
+
+
 
 @others</t>
 <t tx="yen.20170429215446.2">PyQt5 架構
 ---
 
-Pyqt
-
-其中包含一個表格：
-
-Table: Python 網際框架比較 {#tbl:網際框架}
-
-| Framework | Started | Py2 | Py3 | ORM | Template Engine | Auth Moudule | Database Admin | Project Scale |
-|:---------:|:-------:|:---:|:---:|:---:|:---------------:|:------------:|:--------------:|:-------------:|
-| Pyramid | 2005 | V | V |  |  | V |  | large |
-| Django | 2006 | V | V | V | V | V | V | large |
-| Flask | 2010 | V |  |  |  |  |  | small |
-
-稱為表 {@tbl:網際框架}。
-
-Table: 價目表 {#tbl:價目表}
-
-| Tables   |      Are      |  Cool |
-|----------|:-------------:|------:|
-| col 1 is |  left-aligned | $1600 |
-| col 2 is |    centered   |   $12 |
-| col 3 is | right-aligned |    $1 |
-
-稱為表 {@tbl:價目表}。
-
-關於表格生成可以參考這裡：[http://www.tablesgenerator.com/markdown_tables]
-
-[http://www.tablesgenerator.com/markdown_tables]: http://www.tablesgenerator.com/markdown_tables
+Pyqt5是一套綁定Digia QT5應用的框架,可用於Python2和3,Pyqt5作為Python的一個模塊,它擁有620多類及6000個函數和方法.是一個跨平台的工具包,可運行在所有主要的操作系統,包刮UNIX和Mac OS.Pyqt5是雙重許可,開發者可在GPL和商業許可間選擇.
 
 </t>
 <t tx="yen.20170429215617.1">Calculator 程式
@@ -494,7 +670,8 @@ Table: 價目表 {#tbl:價目表}
 
 Calculator 程式細部說明
 
-@others</t>
+@others
+</t>
 <t tx="yen.20170429215851.1">建立對話框
 ---
 
@@ -529,9 +706,48 @@ Table: 價目表 {#tbl:價目表}
 建立按鈕
 ---
 
+從左邊工具列拉按鈕"Push Button"
+![P-Button][]
+
+稱為圖 {@fig:P-Button}。
+
+並更改每一項的命名"objectName"
+[P-Button]: ./images/P-Button.PNG {#fig:P-Button}
+
+以及拉顯示欄"Line Edit"
+![P-Display][]
+
+稱為圖 {@fig:P-Display}。
+
+更改其名稱為"display"
+[P-Display]: ./images/P-Display.png {#fig:P-Display}
+
+
 建立程式碼
 ---
 
+導入 sys 模組→import sys
+
+從PyQt5模組導入QtWidgets模組→from PyQt5 import QtWidgets
+
+從ui目錄導入Dialog.py, Python 程式檔案本身就是一個模組, 且文件名就是模組名→from ui import Dialog
+
+定義各數字名稱→number = [self.one,  self.two,  self.three,  self.four , self.five,　self.six,  self.seven,  self.eight,  self.nine,  self.zero]
+
+以及符號名稱→plus_minus = [self.plusButton, self.minusButton]
+
+times_division = [self.timesButton, self.divisionButton]
+
+unary = [self.reciprocalButton,  self.squareRootButton,  self.powerButton]
+
+建立迴圈使程式簡單化
+
+![for O][]
+
+稱為圖 {@fig:for O}。
+[for O]: ./images/for O.png {#fig:for O}
+
+其餘建立各個Button的函式
 </t>
 <t tx="yen.20170429215922.1">心得
 ===
@@ -564,7 +780,9 @@ bg2：https://github.com/40623206/bg2_pyqt5_calculator
 
 40623214-
 
-40623215-
+40623215
+
+雖然看老師的函式都能了解其意思，但自己要憑空打出來卻比想像中困難。
 
 40623249-
 
