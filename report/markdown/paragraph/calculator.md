@@ -36,6 +36,10 @@ Table: 價目表 {#tbl:價目表}
 
 建立按鈕
 ---
+![P-Button][]
+
+稱為圖 {@fig:P-Button}。
+[P-Button]: ./images/P-Button.png {#fig:P-Button}
 
 建立程式碼
 ---
