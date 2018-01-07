@@ -55,6 +55,12 @@
 </v>
 </v>
 </v>
+<v t="leo.20180107103209.1" a="E"><vh>Recovered Nodes</vh>
+<v t="leo.20180107103209.2"><vh>Recovered node "程式開發心得" from @clean discussion.md</vh>
+<v t="leo.20180107103209.3"><vh>old:程式開發心得</vh></v>
+<v t="leo.20180107103209.4"><vh>new:程式開發心得</vh></v>
+</v>
+</v>
 </vnodes>
 <tnodes>
 <t tx="40323230.20170123213451.1">@language python
@@ -222,6 +228,148 @@ abstract: |
 參考 - 詳列所引用的參考內容
 
 附錄 - 附加值得參考的詳細內容</t>
+<t tx="leo.20180107103209.1"></t>
+<t tx="leo.20180107103209.2">(uncached) yen.20170429220001.1
+Diff...
+  Fossil SCM
+  ---
+  
+  網誌心得
+  ---
+  
+  Github 協同倉儲
++ ---
+  
++ 學員心得
++ ---
+- bg2：https://github.com/40623206/bg2_pyqt5_calculator
+- 
+- 說明各學員任務與執行過程
+- 
+  40623204-
+  
+- 40623206
++ 40623206-
+?         +
+- 
+- 數字、數字疊加、+、-、=、計算、中斷運算、clearAll
+- 
+- 因為waitingForOperand的waiting少了ing，所以一直無法順利執行
+- 
+- +跟-的部分用了For迴圈及各自跟下面做連結，導致+按下去*2，-按下去*0
+  
+  40623214-
+  
+  40623215-
+  
+  40623249-
+  
+  40623251-
+  
+- 學員心得
++ 說明各學員任務與執行過程
+  
+  40623204-
+  
+- 40623206
++ 40623206-
+?         +
+- 
+- 從一開始的eric6建立Dialog拉按鈕及顯示幕到使用物件導向編寫程式，用運老師所教的，利用For迴圈連結同屬性的東西，才不會使程式複雜化。
+  
+  40623214-
+  
+  40623215-
+  
+  40623249-
+  
+- 40623251-
+?          -
++ 40623251-- 
+</t>
+<t tx="leo.20180107103209.3">Fossil SCM
+---
+
+網誌心得
+---
+
+Github 協同倉儲
+---
+
+學員心得
+---
+40623204-
+
+40623206-
+
+40623214-
+
+40623215-
+
+40623249-
+
+40623251-
+
+說明各學員任務與執行過程
+
+40623204-
+
+40623206-
+
+40623214-
+
+40623215-
+
+40623249-
+
+40623251-</t>
+<t tx="leo.20180107103209.4">Fossil SCM
+---
+
+網誌心得
+---
+
+Github 協同倉儲
+
+bg2：https://github.com/40623206/bg2_pyqt5_calculator
+
+說明各學員任務與執行過程
+
+40623204-
+
+40623206
+
+數字、數字疊加、+、-、=、計算、中斷運算、clearAll
+
+因為waitingForOperand的waiting少了ing，所以一直無法順利執行
+
++跟-的部分用了For迴圈及各自跟下面做連結，導致+按下去*2，-按下去*0
+
+40623214-
+
+40623215-
+
+40623249-
+
+40623251-
+
+學員心得
+
+40623204-
+
+40623206
+
+從一開始的eric6建立Dialog拉按鈕及顯示幕到使用物件導向編寫程式，用運老師所教的，利用For迴圈連結同屬性的東西，才不會使程式複雜化。
+
+40623214-
+
+40623215-
+
+40623249-
+
+40623251-
+
+</t>
 <t tx="yen.20170429103742.1"></t>
 <t tx="yen.20170429103940.1"></t>
 <t tx="yen.20170429132400.1">每一位協同人員各在 users 目錄中建立一個 .leo 檔案
@@ -381,16 +529,56 @@ Table: 價目表 {#tbl:價目表}
 建立按鈕
 ---
 
+從左邊工具列拉按鈕"Push Button"
+![P-Button][]
+
+稱為圖 {@fig:P-Button}。
+
+並更改每一項的命名"objectName"
+[P-Button]: ./images/P-Button.PNG {#fig:P-Button}
+
+以及拉顯示欄"Line Edit"
+![P-Display][]
+
+稱為圖 {@fig:P-Display}。
+
+更改其名稱為"display"
+[P-Display]: ./images/P-Display.png {#fig:P-Display}
+
+
 建立程式碼
 ---
 
+導入 sys 模組→import sys
+
+從PyQt5模組導入QtWidgets模組→from PyQt5 import QtWidgets
+
+從ui目錄導入Dialog.py, Python 程式檔案本身就是一個模組, 且文件名就是模組名→from ui import Dialog
+
+定義各數字名稱→number = [self.one,  self.two,  self.three,  self.four , self.five,　self.six,  self.seven,  self.eight,  self.nine,  self.zero]
+
+以及符號名稱→plus_minus = [self.plusButton, self.minusButton]
+
+times_division = [self.timesButton, self.divisionButton]
+
+unary = [self.reciprocalButton,  self.squareRootButton,  self.powerButton]
+
+建立迴圈使程式簡單化
+
+![for O][]
+
+稱為圖 {@fig:for O}。
+[for O]: ./images/for O.png {#fig:for O}
+
+其餘建立各個Button的函式
 </t>
 <t tx="yen.20170429215922.1">心得
 ===
 
 期末報告心得
 
-@others</t>
+@others
+</t>
 <t tx="yen.20170429220001.1">Fossil SCM
 ---
 
@@ -398,13 +586,38 @@ Table: 價目表 {#tbl:價目表}
 ---
 
 Github 協同倉儲
----
 
-學員心得
----
+bg2：https://github.com/40623206/bg2_pyqt5_calculator
+
+說明各學員任務與執行過程
+
 40623204-
 
-40623206-
+40623206
+
+數字、數字疊加、+、-、=、計算、中斷運算、clearAll
+
+因為waitingForOperand的waiting少了ing，所以一直無法順利執行
+
++跟-的部分用了For迴圈及各自跟下面做連結，導致+按下去*2，-按下去*0
+
+40623214-
+
+40623215
+
+雖然看老師的函式都能了解其意思，但自己要憑空打出來卻比想像中困難。
+
+40623249-
+
+40623251-
+
+學員心得
+
+40623204-
+
+40623206
+
+從一開始的eric6建立Dialog拉按鈕及顯示幕到使用物件導向編寫程式，用運老師所教的，利用For迴圈連結同屬性的東西，才不會使程式複雜化。
 
 40623214-
 
@@ -414,19 +627,7 @@ Github 協同倉儲
 
 40623251-
 
-說明各學員任務與執行過程
-
-40623204-
-
-40623206-
-
-40623214-
-
-40623215-
-
-40623249-
-
-40623251-</t>
+</t>
 <t tx="yen.20170429220128.1">結論
 ===
 
