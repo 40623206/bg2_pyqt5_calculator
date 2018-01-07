@@ -59,6 +59,8 @@ class Dialog(QDialog, Ui_Dialog):
         self.equalButton.clicked.connect(self.equalClicked)
         self.clearMemoryButton.clicked.connect(self.clearMemory)
         self.changeSignButton.clicked.connect(self.changeSignClicked)
+        self.setMemoryButton.clicked.connect(self.setMemory)
+        self.addToMemoryButton.clicked.connect(self.addToMemory)
         
         self.pendingAdditiveOperator = ''
         self.sumSoFar = 0.0
@@ -261,11 +263,13 @@ class Dialog(QDialog, Ui_Dialog):
         self.sumInMemory = float(self.display.text())        
     def addToMemory(self):
         '''放到記憶體鍵按下後的處理方法'''
-        pass
+        #pass
+        self.equalClicked()
+        self.sumInMemory += float(self.display.text())
         
     def createButton(self):
         ''' 建立按鍵處理方法, 以 Qt Designer 建立對話框時, 不需要此方法'''
-        pass
+        #pass
         
     def abortOperation(self):
         '''中斷運算'''
