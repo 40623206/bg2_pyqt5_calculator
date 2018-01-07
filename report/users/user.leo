@@ -55,6 +55,12 @@
 </v>
 </v>
 </v>
+<v t="leo.20180107121922.2" a="E"><vh>Recovered Nodes</vh>
+<v t="leo.20180107121922.3"><vh>Recovered node "計算機程式內容" from @clean calculator.md</vh>
+<v t="leo.20180107121922.4"><vh>old:計算機程式內容</vh></v>
+<v t="leo.20180107121922.5"><vh>new:計算機程式內容</vh></v>
+</v>
+</v>
 </vnodes>
 <tnodes>
 <t tx="40323230.20170123213451.1">@language python
@@ -222,6 +228,131 @@ abstract: |
 參考 - 詳列所引用的參考內容
 
 附錄 - 附加值得參考的詳細內容</t>
+<t tx="leo.20180107121922.2"></t>
+<t tx="leo.20180107121922.3">(uncached) yen.20170429215851.1
+Diff...
+  建立對話框
+  ---
+  
+  自動控制 的內容
+  
+  其中包含一個表格：
+  
+  Table: Python 網際框架比較 {#tbl:網際框架}
+  
+  | Framework | Started | Py2 | Py3 | ORM | Template Engine | Auth Moudule | Database Admin | Project Scale |
+  |:---------:|:-------:|:---:|:---:|:---:|:---------------:|:------------:|:--------------:|:-------------:|
+  | Pyramid | 2005 | V | V |  |  | V |  | large |
+  | Django | 2006 | V | V | V | V | V | V | large |
+  | Flask | 2010 | V |  |  |  |  |  | small |
+  
+  稱為表 {@tbl:網際框架}。
+  
+  Table: 價目表 {#tbl:價目表}
+  
+  | Tables   |      Are      |  Cool |
+  |----------|:-------------:|------:|
+  | col 1 is |  left-aligned | $1600 |
+  | col 2 is |    centered   |   $12 |
+  | col 3 is | right-aligned |    $1 |
+  
+  稱為表 {@tbl:價目表}。
+  
+  關於表格生成可以參考這裡：[http://www.tablesgenerator.com/markdown_tables]
+  
+  [http://www.tablesgenerator.com/markdown_tables]: http://www.tablesgenerator.com/markdown_tables
+  
+  建立按鈕
+  ---
+- ![P-Button][]
+- 
+- 稱為圖 {@fig:P-Button}。
+- [P-Button]: ./images/P-Button.png {#fig:P-Button}
+  
+  建立程式碼
+  ---
+  
+</t>
+<t tx="leo.20180107121922.4">建立對話框
+---
+
+自動控制 的內容
+
+其中包含一個表格：
+
+Table: Python 網際框架比較 {#tbl:網際框架}
+
+| Framework | Started | Py2 | Py3 | ORM | Template Engine | Auth Moudule | Database Admin | Project Scale |
+|:---------:|:-------:|:---:|:---:|:---:|:---------------:|:------------:|:--------------:|:-------------:|
+| Pyramid | 2005 | V | V |  |  | V |  | large |
+| Django | 2006 | V | V | V | V | V | V | large |
+| Flask | 2010 | V |  |  |  |  |  | small |
+
+稱為表 {@tbl:網際框架}。
+
+Table: 價目表 {#tbl:價目表}
+
+| Tables   |      Are      |  Cool |
+|----------|:-------------:|------:|
+| col 1 is |  left-aligned | $1600 |
+| col 2 is |    centered   |   $12 |
+| col 3 is | right-aligned |    $1 |
+
+稱為表 {@tbl:價目表}。
+
+關於表格生成可以參考這裡：[http://www.tablesgenerator.com/markdown_tables]
+
+[http://www.tablesgenerator.com/markdown_tables]: http://www.tablesgenerator.com/markdown_tables
+
+建立按鈕
+---
+
+建立程式碼
+---
+
+</t>
+<t tx="leo.20180107121922.5">建立對話框
+---
+
+自動控制 的內容
+
+其中包含一個表格：
+
+Table: Python 網際框架比較 {#tbl:網際框架}
+
+| Framework | Started | Py2 | Py3 | ORM | Template Engine | Auth Moudule | Database Admin | Project Scale |
+|:---------:|:-------:|:---:|:---:|:---:|:---------------:|:------------:|:--------------:|:-------------:|
+| Pyramid | 2005 | V | V |  |  | V |  | large |
+| Django | 2006 | V | V | V | V | V | V | large |
+| Flask | 2010 | V |  |  |  |  |  | small |
+
+稱為表 {@tbl:網際框架}。
+
+Table: 價目表 {#tbl:價目表}
+
+| Tables   |      Are      |  Cool |
+|----------|:-------------:|------:|
+| col 1 is |  left-aligned | $1600 |
+| col 2 is |    centered   |   $12 |
+| col 3 is | right-aligned |    $1 |
+
+稱為表 {@tbl:價目表}。
+
+關於表格生成可以參考這裡：[http://www.tablesgenerator.com/markdown_tables]
+
+[http://www.tablesgenerator.com/markdown_tables]: http://www.tablesgenerator.com/markdown_tables
+
+建立按鈕
+---
+![P-Button][]
+
+稱為圖 {@fig:P-Button}。
+[P-Button]: ./images/P-Button.png {#fig:P-Button}
+
+建立程式碼
+---
+
+</t>
 <t tx="yen.20170429103742.1"></t>
 <t tx="yen.20170429103940.1"></t>
 <t tx="yen.20170429132400.1">每一位協同人員各在 users 目錄中建立一個 .leo 檔案
@@ -346,7 +477,8 @@ Table: 價目表 {#tbl:價目表}
 
 Calculator 程式細部說明
 
-@others</t>
+@others
+</t>
 <t tx="yen.20170429215851.1">建立對話框
 ---
 
@@ -380,6 +512,10 @@ Table: 價目表 {#tbl:價目表}
 
 建立按鈕
 ---
+![P-Button][]
+
+稱為圖 {@fig:P-Button}。
+[P-Button]: ./images/P-Button.png {#fig:P-Button}
 
 建立程式碼
 ---
@@ -392,10 +528,36 @@ Table: 價目表 {#tbl:價目表}
 
 @others</t>
 <t tx="yen.20170429220001.1">Fossil SCM
----
+
+40623204-
+
+40623206
+
+從無到有, 用幾個簡單的fossil指令建倉儲, 利用近端遠端維護網誌,使得我更了解fossil的運用
+
+40623214-
+
+40623215-
+
+40623249-
+
+40623251-
 
 網誌心得
----
+
+40623204-
+
+40623206
+
+將上課所寫的筆記整理完後, 以最簡潔的方式放到網誌上, 記錄每週所學東西, 雖然不是很熟悉, 但大致上了解得差不多
+
+40623214-
+
+40623215-
+
+40623249-
+
+40623251-
 
 Github 協同倉儲
 
